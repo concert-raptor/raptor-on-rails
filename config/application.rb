@@ -19,5 +19,14 @@ module RaptorOnRails
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    ActionMailer::Base.smtp_settings = {
+      address:        secret_config[:email][:address],
+      port:           secret_config[:email][:port],
+      domain:         secret_config[:email][:domain],
+      user_name:      secret_config[:email][:username],
+      password:       secret_config[:email][:pass],
+      authentication: :plain
+    }
   end
 end

@@ -38,3 +38,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+gem 'devise-async'
+gem 'annotate'
+gem 'omniauth'
+gem 'sidekiq'
+
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+
