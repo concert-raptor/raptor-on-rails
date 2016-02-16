@@ -43,6 +43,7 @@ gem 'devise-async'
 gem 'annotate'
 gem 'omniauth'
 gem 'sidekiq'
+gem 'pry'
 
 
 group :development do

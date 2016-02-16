@@ -1,5 +1,11 @@
 class Admin::VenuesController < ApplicationController
 
+  # CRUD
+  # CREATE 
+  # READ (get)
+  # UPDATE 
+  # DESTROY
+
   def index
     @venues = Venue.all
   end
@@ -9,10 +15,11 @@ class Admin::VenuesController < ApplicationController
 
   def show
     @venue = Venue.find_by(id: params[:id])
+    @array = ['what', 'hi', 'there']
+    @new_var = @venue.name_and_description
   end
 
   def edit
-
   end
 
   def update
